@@ -23,6 +23,6 @@ module.exports = {
    } else if (notificationMode === 'Whatsapp') {
      return Whatsapp;
    } else {
-     return Sms;
+     return SMS;
    }
  }

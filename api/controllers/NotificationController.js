@@ -8,7 +8,7 @@ let fs = require('fs');
 module.exports = {
   
     scheduleNotifications : function(req,res){
-        let notificationMode = req.param(notificationMode) ;
+        let notificationMode = req.param('notificationMode') ;
        
         ScheduleCron.scheduleNotification(notificationMode)
         .then(functionResponse=>{
@@ -76,7 +76,7 @@ function getNotificationService(notificationMode) {
   } else if (notificationMode === 'Whatsapp') {
     return Whatsapp;
   } else {
-    return Sms;
+    return SMS;
   }
 }
 
