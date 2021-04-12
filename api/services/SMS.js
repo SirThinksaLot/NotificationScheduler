@@ -2,7 +2,7 @@ const rp = require('request-promise');
 
 module.exports = {
     sendNotifications : function(){
-        return Users.getDataFromCsv
+        return Users.getDataFromCsv()
         .then(userArray=>{
             let notificationArray = [] ;
             userArray.forEach(user=>{
